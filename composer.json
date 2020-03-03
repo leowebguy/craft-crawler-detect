@@ -1,0 +1,33 @@
+{
+	"name": "leowebguy/craft-crawler-detect",
+	"description": "PHP class for detecting bots/crawlers/spiders",
+	"version": "1.0.0",
+	"type": "craft-plugin",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Leo",
+			"homepage": "https://github.com/leowebguy"
+		}
+	],
+	"require": {
+		"craftcms/cms": "^3.1.0",
+		"jaybizzle/crawler-detect": "1.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"leowebguy\\crawlerdetect\\": "src/"
+		}
+	},
+	"extra": {
+		"name": "Crawler Detect",
+		"handle": "crawler-detect",
+		"hasCpSection": false,
+		"hasCpSettings": false,
+		"changelogUrl": "https://raw.githubusercontent.com/leowebguy/craft-crawler-detect/master/CHANGELOG.md",
+		"components": {
+			"crawlerDetectService": "leowebguy\\crawlerdetect\\services\\CrawlerDetectService"
+		},
+		"class": "leowebguy\\crawlerdetect\\CrawlerDetect"
+	}
+}

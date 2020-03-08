@@ -1,6 +1,6 @@
 # CrawlerDetect plugin for Craft 3
 
-Detect bots/crawlers/spiders in Craft 3.
+Craft 3 plugin for detecting bots/crawlers/spiders
 
 ![Screenshot](resources/icon.svg)
 
@@ -34,17 +34,17 @@ A wrapper for the [CrawlerDetect](https://github.com/JayBizzle/Crawler-Detect) b
 
 ### Usage
 
-The plugin exposes a Crawler Detect's methods, and can be used in your Twig:
+The plugin exposes a Crawler Detect's methods:
 
 ```twig
 {{ craft.crawlerDetect.isCrawler ? 'I am a crawler.' : 'I am not crawler.' }}
 ```
 
 ```twig
-{% if craft.crawlerDetect.isCrawler %} .. {% endif %}
+{% if craft.crawlerDetect.isCrawler %} I am a crawler. {% endif %}
 ```
 
 Also passing user agent as string:
 ```twig
-{% if craft.crawlerDetect.isCrawler('Mozilla/5.0 (compatible; Sosospider/2.0; +http://help.soso.com/webspider.htm)') %} .. {% endif %}
+{% if craft.crawlerDetect.isCrawler('Mozilla/5.0 (compatible; Sosospider/2.0; +http://help.soso.com/webspider.htm)') %} I am a crawler. {% endif %}
 ```

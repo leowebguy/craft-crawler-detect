@@ -18,7 +18,7 @@ class CrawlerDetect extends Plugin
 {
     public static $plugin;
 
-    public function init ()
+    public function init()
     {
         parent::init();
         self::$plugin = $this;

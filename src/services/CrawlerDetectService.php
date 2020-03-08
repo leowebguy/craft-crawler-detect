@@ -15,7 +15,7 @@ class CrawlerDetectService extends Component
     /**
      * @return Crawler_Detect|null
      */
-    public function getCrawlerDetect ()
+    public function getCrawlerDetect()
     {
         if ( $this->_crawlerDetect === null ) {
             $this->_crawlerDetect = new CrawlerDetect();

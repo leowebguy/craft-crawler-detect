@@ -1,34 +1,19 @@
 <?php
 namespace leowebguy\crawlerdetect\variables;
 
-use Jaybizzle\CrawlerDetect\CrawlerDetect;
+use leowebguy\crawlerdetect\CrawlerDetect;
 
 /**
  * Class CrawlerDetectVariable
  */
 class CrawlerDetectVariable
 {
-    private $_crawlerDetect = null;
-
-    /**
-     * @return Crawler_Detect|null
-     */
-    public function getCrawlerDetect ()
+    public function getCrawlerDetect()
     {
-        if ( $this->_crawlerDetect === null ) {
-            $this->_crawlerDetect = new CrawlerDetect();
-        }
-
-        return $this->_crawlerDetect;
+        return CrawlerDetect::$plugin->crawlerDetectService->getgetCrawlerDetect();
     }
-
-    /**
-     * Returns true for any crawler device
-     * @param null $userAgent
-     * @return bool
-     */
-    public function isCrawler ($userAgent = null)
+    public function isCrawler($userAgent = null)
     {
-        return $this->getCrawlerDetect()->isCrawler($userAgent);
+        return CrawlerDetect::$plugin->crawlerDetectService->getCrawlerDetect()->isCrawler($userAgent);
     }
 }

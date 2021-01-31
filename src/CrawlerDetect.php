@@ -1,23 +1,30 @@
 <?php
-namespace leowebguy\crawlerdetect;
+/**
+ * CrawlerDetect Plugin for Craft 3
+ * @author Leo Leoncio
+ */
 
-use leowebguy\crawlerdetect\services\CrawlerDetectService;
-use leowebguy\crawlerdetect\variables\CrawlerDetectVariable;
+namespace leowebguy\crawlerdetect;
 
 use Craft;
 use craft\base\Plugin;
 use craft\web\twig\variables\CraftVariable;
-
+use leowebguy\crawlerdetect\services\CrawlerDetectService;
+use leowebguy\crawlerdetect\variables\CrawlerDetectVariable;
 use yii\base\Event;
 
 /**
- * Class CrawlerDetect
- * @property  CrawlerDetectService $crawlerDetectService
+ * CrawlerDetect
  */
 class CrawlerDetect extends Plugin
 {
     public static $plugin;
 
+    /**
+     * init
+     *
+     * @return void
+     */
     public function init()
     {
         parent::init();
@@ -37,10 +44,9 @@ class CrawlerDetect extends Plugin
             Craft::t(
                 'crawler-detect',
                 '{name} plugin loaded',
-                [ 'name' => $this->name ]
+                ['name' => $this->name]
             ),
             __METHOD__
         );
     }
-
 }

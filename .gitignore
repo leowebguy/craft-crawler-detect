@@ -4,6 +4,7 @@
 .env
 
 # COMPOSER
+composer.lock
 /vendor
 
 # BUILD FILES
@@ -11,6 +12,7 @@
 
 # MISC FILES
 .cache
+.php_cs.cache
 .DS_Store
 .idea
 .project

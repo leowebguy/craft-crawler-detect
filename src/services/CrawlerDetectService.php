@@ -1,23 +1,34 @@
 <?php
+/**
+ * CrawlerDetect Plugin for Craft 3
+ * @author Leo Leoncio
+ */
+
 namespace leowebguy\crawlerdetect\services;
 
+use craft\base\Component;
 use Jaybizzle\CrawlerDetect\CrawlerDetect;
 
-use craft\base\Component;
-
 /**
- * Class CrawlerDetectService
+ * CrawlerDetectService
  */
 class CrawlerDetectService extends Component
 {
+    /**
+     * _crawlerDetect
+     *
+     * @var mixed
+     */
     private $_crawlerDetect;
 
     /**
-     * @return Crawler_Detect|null
+     * getCrawlerDetect
+     *
+     * @return void
      */
     public function getCrawlerDetect()
     {
-        if ( $this->_crawlerDetect === null ) {
+        if (null === $this->_crawlerDetect) {
             $this->_crawlerDetect = new CrawlerDetect();
         }
 
@@ -25,11 +36,12 @@ class CrawlerDetectService extends Component
     }
 
     /**
-     * Returns true for any crawler device
-     * @param null $userAgent
-     * @return bool
+     * isCrawler
+     *
+     * @param  mixed $userAgent
+     * @return void
      */
-    public function isCrawler ($userAgent = null)
+    public function isCrawler($userAgent = null)
     {
         return $this->getCrawlerDetect()->isCrawler($userAgent);
     }

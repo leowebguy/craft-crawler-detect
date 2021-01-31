@@ -14,6 +14,9 @@
 		"craftcms/cms": "^3.1.0",
 		"jaybizzle/crawler-detect": "1.*"
 	},
+	"require-dev": {
+		"friendsofphp/php-cs-fixer": "^2.18"
+	},
 	"autoload": {
 		"psr-4": {
 			"leowebguy\\crawlerdetect\\": "src/"
@@ -29,5 +32,9 @@
 			"crawlerDetectService": "leowebguy\\crawlerdetect\\services\\CrawlerDetectService"
 		},
 		"class": "leowebguy\\crawlerdetect\\CrawlerDetect"
+	},
+	"scripts": {
+		"lint": "vendor/bin/php-cs-fixer fix src --dry-run --rules=@Symfony -vvv",
+		"lint-fix": "vendor/bin/php-cs-fixer fix src --rules=@Symfony -vvv"
 	}
 }

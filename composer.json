@@ -1,7 +1,7 @@
 {
 	"name": "leowebguy/craft-crawler-detect",
 	"description": "Craft 3 plugin for detecting bots/crawlers/spiders",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"type": "craft-plugin",
 	"license": "MIT",
 	"authors": [

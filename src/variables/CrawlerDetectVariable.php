@@ -1,6 +1,7 @@
 <?php
 /**
- * CrawlerDetect Plugin for Craft 3
+ * CrawlerDetect Plugin for Craft 3.
+ *
  * @author Leo Leoncio
  */
 
@@ -9,25 +10,26 @@ namespace leowebguy\crawlerdetect\variables;
 use leowebguy\crawlerdetect\CrawlerDetect;
 
 /**
- * CrawlerDetectVariable
+ * CrawlerDetectVariable.
  */
 class CrawlerDetectVariable
 {
     /**
-     * getCrawlerDetect
+     * getCrawlerDetect.
      *
-     * @return void
+     * @return string
      */
     public function getCrawlerDetect()
     {
-        return CrawlerDetect::$plugin->crawlerDetectService->getgetCrawlerDetect();
+        return CrawlerDetect::$plugin->crawlerDetectService->getCrawlerDetect();
     }
 
     /**
-     * isCrawler
+     * isCrawler.
      *
-     * @param  mixed $userAgent
-     * @return void
+     * @param mixed $userAgent
+     *
+     * @return bool
      */
     public function isCrawler($userAgent = null)
     {

@@ -11,7 +11,6 @@
 		}
 	],
 	"require": {
-		"craftcms/cms": "^3.1.0",
 		"jaybizzle/crawler-detect": "1.*"
 	},
 	"require-dev": {

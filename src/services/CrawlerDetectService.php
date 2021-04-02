@@ -1,6 +1,7 @@
 <?php
 /**
- * CrawlerDetect Plugin for Craft 3
+ * CrawlerDetect Plugin for Craft 3.
+ *
  * @author Leo Leoncio
  */
 
@@ -10,19 +11,19 @@ use craft\base\Component;
 use Jaybizzle\CrawlerDetect\CrawlerDetect;
 
 /**
- * CrawlerDetectService
+ * CrawlerDetectService.
  */
 class CrawlerDetectService extends Component
 {
     /**
-     * _crawlerDetect
+     * _crawlerDetect.
      *
      * @var mixed
      */
     private $_crawlerDetect;
 
     /**
-     * getCrawlerDetect
+     * getCrawlerDetect.
      *
      * @return void
      */
@@ -36,9 +37,10 @@ class CrawlerDetectService extends Component
     }
 
     /**
-     * isCrawler
+     * isCrawler.
      *
-     * @param  mixed $userAgent
+     * @param mixed $userAgent
+     *
      * @return void
      */
     public function isCrawler($userAgent = null)

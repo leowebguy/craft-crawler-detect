@@ -1,16 +1,35 @@
-# CRAFT ENVIRONMENT
-.env.php
-.env.sh
+# parameters
 .env
 
-# COMPOSER
+# composer/npm
 composer.lock
-/vendor
-
-# BUILD FILES
+/vendor/**/*
+package-lock.json
 /node_modules/*
 
-# MISC FILES
+# personal
+/.sql/*
+run.sh
+.info
+
+# ide
+.idea
+.vscode
+
+# web
+/web/cpresources
+/web/error.log
+/web/google*
+
+# build
+/web/css/*
+/web/js/*
+
+# thumbnails
+._*
+
+# misc
+.sass-cache
 .cache
 .php_cs.cache
 .DS_Store
@@ -29,7 +48,3 @@ composer.lock
 !.vscode/extensions.json
 config.codekit3
 prepros-6.config
-.editorconfig
-
-# CUSTOM
-run.sh

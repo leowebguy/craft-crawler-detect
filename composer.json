@@ -26,7 +26,6 @@
 		"handle": "crawler-detect",
 		"hasCpSection": false,
 		"hasCpSettings": false,
-		"changelogUrl": "https://raw.githubusercontent.com/leowebguy/craft-crawler-detect/master/CHANGELOG.md",
 		"components": {
 			"crawlerDetectService": "leowebguy\\crawlerdetect\\services\\CrawlerDetectService"
 		},

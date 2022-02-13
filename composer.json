@@ -26,14 +26,13 @@
 		"handle": "crawler-detect",
 		"hasCpSection": false,
 		"hasCpSettings": false,
-		"changelogUrl": "https://raw.githubusercontent.com/leowebguy/craft-crawler-detect/master/CHANGELOG.md",
 		"components": {
 			"crawlerDetectService": "leowebguy\\crawlerdetect\\services\\CrawlerDetectService"
 		},
 		"class": "leowebguy\\crawlerdetect\\CrawlerDetect"
 	},
 	"scripts": {
-		"lint": "vendor/bin/php-cs-fixer fix src --dry-run --rules=@Symfony -vvv",
-		"lint-fix": "vendor/bin/php-cs-fixer fix src --rules=@Symfony -vvv"
+		"lint": "vendor/bin/php-cs-fixer fix src --dry-run --rules=@PSR2 -vvv",
+        	"lint-fix": "vendor/bin/php-cs-fixer fix src --rules=@PSR2 -vvv"
 	}
 }

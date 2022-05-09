@@ -1,38 +1,59 @@
 {
-	"name": "leowebguy/craft-crawler-detect",
-	"description": "Craft 3 plugin for detecting bots/crawlers/spiders",
-	"version": "1.0.1",
-	"type": "craft-plugin",
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Leo",
-			"homepage": "https://github.com/leowebguy"
-		}
-	],
-	"require": {
-		"jaybizzle/crawler-detect": "1.*"
-	},
-	"require-dev": {
-		"friendsofphp/php-cs-fixer": "^2.18"
-	},
-	"autoload": {
-		"psr-4": {
-			"leowebguy\\crawlerdetect\\": "src/"
-		}
-	},
-	"extra": {
-		"name": "Crawler Detect",
-		"handle": "crawler-detect",
-		"hasCpSection": false,
-		"hasCpSettings": false,
-		"components": {
-			"crawlerDetectService": "leowebguy\\crawlerdetect\\services\\CrawlerDetectService"
-		},
-		"class": "leowebguy\\crawlerdetect\\CrawlerDetect"
-	},
-	"scripts": {
-		"lint": "vendor/bin/php-cs-fixer fix src --dry-run --rules=@PSR2 -vvv",
-        	"lint-fix": "vendor/bin/php-cs-fixer fix src --rules=@PSR2 -vvv"
-	}
+  "name": "leowebguy/craft-crawler-detect",
+  "description": "Craft 3 plugin for detecting bots/crawlers/spiders",
+  "keywords": [
+    "crawler",
+    "detect",
+    "bots",
+    "spiders"
+  ],
+  "version": "1.0.2",
+  "type": "craft-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Leo",
+      "homepage": "https://github.com/leowebguy"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "jaybizzle/crawler-detect": "1.*",
+    "craftcms/cms": "^4.0.0"
+  },
+  "require-dev": {
+    "craftcms/ecs": "dev-main",
+    "craftcms/phpstan": "dev-main",
+    "craftcms/rector": "dev-main"
+  },
+  "autoload": {
+    "psr-4": {
+      "leowebguy\\crawlerdetect\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Crawler Detect",
+    "handle": "crawler-detect",
+    "hasCpSection": false,
+    "hasCpSettings": false,
+    "components": {
+      "crawlerDetectService": "leowebguy\\crawlerdetect\\services\\CrawlerDetectService"
+    },
+    "class": "leowebguy\\crawlerdetect\\CrawlerDetect"
+  },
+  "config": {
+    "platform": {
+      "php": "8.0.2"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  },
+  "scripts": {
+    "check-cs": "ecs check --ansi",
+    "fix-cs": "ecs check --ansi --fix",
+    "phpstan": "phpstan --memory-limit=1G"
+  }
 }

@@ -1,10 +1,6 @@
-# CrawlerDetect plugin for Craft 3
+# CrawlerDetect plugin for Craft
 
-Craft 3 plugin for detecting bots/crawlers/spiders
-
-![Screenshot](resources/icon.svg)
-
-&nbsp;
+Craft plugin for detecting bots/crawlers/spiders
 
 ---
 

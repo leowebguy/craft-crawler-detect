@@ -1,8 +1,12 @@
 <?php
 /**
- * CrawlerDetect Plugin for Craft 3.
+ * CrawlerDetect Plugin for Craft
+ * Craft twig expension for detecting bots/crawlers/spiders
  *
- * @author Leo Leoncio
+ * @author     Leo Leoncio
+ * @see        https://github.com/leowebguy
+ * @copyright  Copyright (c) 2021, leowebguy
+ * @license    MIT
  */
 
 namespace leowebguy\crawlerdetect\variables;
@@ -10,28 +14,27 @@ namespace leowebguy\crawlerdetect\variables;
 use leowebguy\crawlerdetect\CrawlerDetect;
 
 /**
- * CrawlerDetectVariable.
+ * Class CrawlerDetectVariable
  */
 class CrawlerDetectVariable
 {
     /**
-     * getCrawlerDetect.
+     * getCrawlerDetect
      *
      * @return string
      */
-    public function getCrawlerDetect()
+    public function getCrawlerDetect(): string
     {
         return CrawlerDetect::$plugin->crawlerDetectService->getCrawlerDetect();
     }
 
     /**
-     * isCrawler.
+     * isCrawler
      *
      * @param mixed $userAgent
-     *
      * @return bool
      */
-    public function isCrawler($userAgent = null)
+    public function isCrawler($userAgent = null): bool
     {
         return CrawlerDetect::$plugin->crawlerDetectService->getCrawlerDetect()->isCrawler($userAgent);
     }

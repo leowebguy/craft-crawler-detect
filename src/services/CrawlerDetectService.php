@@ -1,8 +1,12 @@
 <?php
 /**
- * CrawlerDetect Plugin for Craft 3.
+ * CrawlerDetect Plugin for Craft
+ * Craft twig expension for detecting bots/crawlers/spiders
  *
- * @author Leo Leoncio
+ * @author     Leo Leoncio
+ * @see        https://github.com/leowebguy
+ * @copyright  Copyright (c) 2021, leowebguy
+ * @license    MIT
  */
 
 namespace leowebguy\crawlerdetect\services;
@@ -11,21 +15,21 @@ use craft\base\Component;
 use Jaybizzle\CrawlerDetect\CrawlerDetect;
 
 /**
- * CrawlerDetectService.
+ * Class CrawlerDetectService
+ *
+ * @property-read void|\Jaybizzle\CrawlerDetect\CrawlerDetect $crawlerDetect
  */
 class CrawlerDetectService extends Component
 {
     /**
-     * _crawlerDetect.
+     * _crawlerDetect
      *
      * @var mixed
      */
     private $_crawlerDetect;
 
     /**
-     * getCrawlerDetect.
-     *
-     * @return void
+     * getCrawlerDetect
      */
     public function getCrawlerDetect()
     {
@@ -37,13 +41,12 @@ class CrawlerDetectService extends Component
     }
 
     /**
-     * isCrawler.
+     * isCrawler
      *
-     * @param mixed $userAgent
-     *
-     * @return void
+     * @param mixed|null $userAgent
+     * @return bool
      */
-    public function isCrawler($userAgent = null)
+    public function isCrawler($userAgent = null): bool
     {
         return $this->getCrawlerDetect()->isCrawler($userAgent);
     }

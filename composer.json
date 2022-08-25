@@ -1,13 +1,13 @@
 {
   "name": "leowebguy/craft-crawler-detect",
-  "description": "Craft 3 plugin for detecting bots/crawlers/spiders",
+  "description": "Craft plugin for detecting bots/crawlers/spiders",
   "keywords": [
     "crawler",
     "detect",
     "bots",
     "spiders"
   ],
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "craft-plugin",
   "license": "MIT",
   "authors": [
@@ -19,8 +19,8 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "jaybizzle/crawler-detect": "1.*",
-    "craftcms/cms": "^3.0|^4.0"
+    "craftcms/cms": "^3.0|^4.0",
+    "jaybizzle/crawler-detect": "1.*"
   },
   "require-dev": {
     "craftcms/ecs": "dev-main",
@@ -37,10 +37,10 @@
     "handle": "crawler-detect",
     "hasCpSection": false,
     "hasCpSettings": false,
+    "class": "leowebguy\\crawlerdetect\\CrawlerDetect",
     "components": {
       "crawlerDetectService": "leowebguy\\crawlerdetect\\services\\CrawlerDetectService"
-    },
-    "class": "leowebguy\\crawlerdetect\\CrawlerDetect"
+    }
   },
   "config": {
     "platform": {
@@ -52,8 +52,8 @@
     }
   },
   "scripts": {
-    "check-cs": "ecs check --ansi",
-    "fix-cs": "ecs check --ansi --fix",
-    "phpstan": "phpstan --memory-limit=1G"
+    "check-cs": "vendor/bin/ecs check src --ansi",
+    "fix-cs": "vendor/bin/ecs check src --ansi --fix",
+    "phpstan": "vendor/bin/phpstan analyse src"
   }
 }

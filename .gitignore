@@ -1,35 +1,11 @@
-# parameters
-.env
-
-# composer/npm
+# COMPOSER
 composer.lock
-/vendor/**/*
-package-lock.json
+/vendor
+
+# NPM
 /node_modules/*
 
-# personal
-/.sql/*
-run.sh
-.info
-
-# ide
-.idea
-.vscode
-
-# web
-/web/cpresources
-/web/error.log
-/web/google*
-
-# build
-/web/css/*
-/web/js/*
-
-# thumbnails
-._*
-
-# misc
-.sass-cache
+# MISC FILES
 .cache
 .php_cs.cache
 .DS_Store
@@ -42,9 +18,5 @@ run.sh
 *.tmproj
 *.tmproject
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 config.codekit3
 prepros-6.config

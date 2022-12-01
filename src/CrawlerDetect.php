@@ -35,6 +35,7 @@ class CrawlerDetect extends Plugin
         parent::init();
         self::$plugin = $this;
 
+        // Craft var
         Event::on(
             CraftVariable::class,
             CraftVariable::EVENT_INIT,
@@ -45,6 +46,7 @@ class CrawlerDetect extends Plugin
             }
         );
 
+        // Log info
         Craft::info(
             'Crawler Detect plugin loaded',
             __METHOD__

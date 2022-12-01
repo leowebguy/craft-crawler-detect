@@ -19,8 +19,9 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
+    "php": "^7.2.5|^8.0",
     "craftcms/cms": "^3.0|^4.0",
-    "jaybizzle/crawler-detect": "1.*"
+    "jaybizzle/crawler-detect": "^1.2"
   },
   "require-dev": {
     "craftcms/ecs": "dev-main",
@@ -54,6 +55,7 @@
   "scripts": {
     "check-cs": "vendor/bin/ecs check src --ansi",
     "fix-cs": "vendor/bin/ecs check src --ansi --fix",
-    "phpstan": "vendor/bin/phpstan analyse src"
+    "phpstan": "vendor/bin/phpstan analyse src",
+    "rector": "vendor/bin/rector process src --config vendor/craftcms/rector/sets/craft-cms-40.php"
   }
 }

@@ -21,7 +21,7 @@
   "require": {
     "php": "^7.2.5|^8.0",
     "craftcms/cms": "^3.0|^4.0",
-    "jaybizzle/crawler-detect": "^1.2"
+    "jaybizzle/crawler-detect": "^v1.2"
   },
   "require-dev": {
     "craftcms/ecs": "dev-main",
@@ -36,12 +36,7 @@
   "extra": {
     "name": "Crawler Detect",
     "handle": "crawler-detect",
-    "hasCpSection": false,
-    "hasCpSettings": false,
-    "class": "leowebguy\\crawlerdetect\\CrawlerDetect",
-    "components": {
-      "crawlerDetectService": "leowebguy\\crawlerdetect\\services\\CrawlerDetectService"
-    }
+    "class": "leowebguy\\crawlerdetect\\Detect"
   },
   "config": {
     "platform": {

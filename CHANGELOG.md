@@ -2,8 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
-## 1.0.3 - 2022.08.24
-### Cleanup
+## 1.0.3 - 2023.03.24
+### Cleanup, PHP 8.1
 
 ## 1.0.2 - 2022.05.09
 ### Craft 4

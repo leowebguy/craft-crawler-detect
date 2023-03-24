@@ -5,7 +5,7 @@
  *
  * @author     Leo Leoncio
  * @see        https://github.com/leowebguy
- * @copyright  Copyright (c) 2021, leowebguy
+ * @copyright  Copyright (c) 2023, leowebguy
  * @license    MIT
  */
 
@@ -14,18 +14,17 @@ namespace leowebguy\crawlerdetect;
 use Craft;
 use craft\base\Plugin;
 use craft\web\twig\variables\CraftVariable;
-use leowebguy\crawlerdetect\variables\CrawlerDetectVariable;
+use leowebguy\crawlerdetect\variables\DetectVariable;
 use yii\base\Event;
 
-/**
- * Class CrawlerDetect
- */
-class CrawlerDetect extends Plugin
+class Detect extends Plugin
 {
     // Properties
     // =========================================================================
 
-    public static $plugin;
+    public bool $hasCpSection = false;
+
+    public bool $hasCpSettings = false;
 
     // Public Methods
     // =========================================================================
@@ -33,20 +32,21 @@ class CrawlerDetect extends Plugin
     public function init()
     {
         parent::init();
-        self::$plugin = $this;
 
-        // Craft var
+        if (!$this->isInstalled) {
+            return;
+        }
+
         Event::on(
             CraftVariable::class,
             CraftVariable::EVENT_INIT,
             function(Event $event) {
                 /** @var CraftVariable $variable */
                 $variable = $event->sender;
-                $variable->set('crawlerDetect', CrawlerDetectVariable::class);
+                $variable->set('crawlerDetect', DetectVariable::class);
             }
         );
 
-        // Log info
         Craft::info(
             'Crawler Detect plugin loaded',
             __METHOD__

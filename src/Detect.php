@@ -6,7 +6,6 @@
  * @author     Leo Leoncio
  * @see        https://github.com/leowebguy
  * @copyright  Copyright (c) 2023, leowebguy
- * @license    MIT
  */
 
 namespace leowebguy\crawlerdetect;
@@ -19,15 +18,9 @@ use yii\base\Event;
 
 class Detect extends Plugin
 {
-    // Properties
-    // =========================================================================
-
     public bool $hasCpSection = false;
 
     public bool $hasCpSettings = false;
-
-    // Public Methods
-    // =========================================================================
 
     public function init()
     {

@@ -1,12 +1,4 @@
 <?php
-/**
- * CrawlerDetect Plugin for Craft
- * Craft twig expension for detecting bots/crawlers/spiders
- *
- * @author     Leo Leoncio
- * @see        https://github.com/leowebguy
- * @copyright  Copyright (c) 2023, leowebguy
- */
 
 namespace leowebguy\crawlerdetect;
 
@@ -16,13 +8,18 @@ use craft\web\twig\variables\CraftVariable;
 use leowebguy\crawlerdetect\variables\DetectVariable;
 use yii\base\Event;
 
+/**
+ * CrawlerDetect Plugin for Craft
+ *
+ * @method static Detect|null getInstance()
+ */
 class Detect extends Plugin
 {
     public bool $hasCpSection = false;
 
     public bool $hasCpSettings = false;
 
-    public function init()
+    public function init(): void
     {
         parent::init();
 
@@ -33,7 +30,7 @@ class Detect extends Plugin
         Event::on(
             CraftVariable::class,
             CraftVariable::EVENT_INIT,
-            function(Event $event) {
+            static function (Event $event): void {
                 /** @var CraftVariable $variable */
                 $variable = $event->sender;
                 $variable->set('crawlerDetect', DetectVariable::class);

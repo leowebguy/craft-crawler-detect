@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.1.0 - 2026.10.30
+### Added
+- Extended PHP compatibility to support `^8.2 || ^8.3 || ^8.4 || ^8.5`
+- Twig helper methods `getMatches()` and `getUserAgent()` exposed on `craft.crawlerDetect`
+- PHPStan Level 8 static analysis configuration (`phpstan.neon`)
+- Development scripts for code style test (`pint-test`) and static analysis (`stan`)
+
+### Changed
+- Required Craft CMS `^5.0.0`
+- Updated `composer.json` metadata for full schema compliance (`documentationUrl`, `developer`)
+- Modernized type signatures with explicit return types and PHP 8.4-compliant explicit nullability (`?string $param = null`)
+- Formatted codebase to PSR-12 standard via Laravel Pint
+
 ## 2.0.0 - 2024.03.26
 ### Craft 5, PHP 8.2
 
